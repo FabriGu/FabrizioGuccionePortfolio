@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FGPortfolio</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/jiu2ecz.css">
+    <link rel="stylesheet" type="text/css" href="./css/custom.css">
+    
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- BOOTSTRAP -->
+</head>
+<body >
+   
+    <div id="container" onresize="reCenterElements()">
+       
+            <a class="buttons" id="work" href="./work.html">
+                <h1>WORK</h1>
+            </a>
+                
+            <a class="buttons" id="about" href="./about.html"> 
+                <h1>ABOUT</h1>
+            </a>
+
+            <div class="buttons" id="home" href="./index.html"> 
+                <h2>FABRIZIO GUCCIONE</h2>
+            </div>
+
+            <a class="buttons" id="resume" href="./resume.html">
+                <h1>RESUME</h1>
+            </a>
+
+            <a class="buttons" id="contact" href="./contact.html">
+                <h1>CONTACT</h1>
+            </a>
+
+    </div>
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="col" id="naneLogo">
+                
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP -->
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <!-- VELOCITY -->
+	<script src="js/velocity.min.js"></script>
+    <!-- CUSTOM -->
+    <script src="./js/customMovement.js"></script>
+    <script>
+        // function enlarge(clicked) {
+        //     console.log(clicked);
+        //     console.log(clicked.id);
+        //     // let enlarge = document.getElementById("'" + clicked.id + "'");
+        //     let enlarge = document.getElementById(clicked.id);
+        //     enlarge.className = "enlarged";
+        //     setTimeout(function() {
+        //         switch (clicked.id) {
+        //             case "work":
+        //                 enlarge.innerHTML = "<h1>WORK INFO HERE</h1>"
+        //                 break;
+        //             case "about":
+        //                 enlarge.innerHTML = "ABOUT INFO HERE"
+        //                 break; 
+        //             case "resume":
+        //                 enlarge.innerHTML = "RESUME INFO HERE"
+        //                 break;
+        //             case "contact":
+        //                 enlarge.innerHTML = "CONTACT INFO HERE"
+        //                 break;
+        //         }
+        //     }, 1000);
+        // }   
+        // $('a.buttons').on('click', function(clicked) {  
+        // console.log(document.getElementsByClassName('enlarged').length);
+        // let noEnlarged = document.getElementsByClassName('enlarged').length;
+        // document.addEventListener('click', function(event) {
+        //     noEnlarged = document.getElementsByClassName('enlarged').length;
+        // });
+        // // console.log(document.getElementsByClassName('enlarged').length);
+        
+        // let enlargedId;
+        // $('.buttons').click(function(clicked) {   
+        //     console.log(clicked);
+        //     console.log(clicked.delegateTarget.id);
+        //     if (noEnlarged == 0) {
+        //         enlarge(clicked);
+        //     } else if (enlargedId == clicked.delegateTarget.id) {
+        //         reduce(clicked);
+        //     } else {
+        //         let switchData = [clicked, enlargedId];
+        //         switchEnlarge(switchData);
+        //     }
+        // });
+
+        // function enlarge(clicked) {
+        //     // console.log(clicked);
+        //     // console.log(clicked.delegateTarget.id);
+        //     // console.log(document.getElementsByClassName('enlarged').length);
+        //     // noEnlarged = document.getElementsByClassName('enlarged').length;
+            
+            
+        //     // console.log(clicked);
+        //     // console.log(clicked.delegateTarget.id);
+        //     const clonedBtn = document.createElement("div");
+        //     console.log(clonedBtn);
+        //     const container = document.getElementById("container");
+        //     container.appendChild(clonedBtn);
+        //     clonedBtn.className = "buttons";
+        //     var targetRect = clicked.target.getBoundingClientRect();
+        //     console.log(targetRect);
+        //     console.log(targetRect.top);
+        //     console.log(clicked.target.getBoundingClientRect().top)
+
+        //     clonedBtn.style.top = targetRect.top;
+        //     clonedBtn.style.left = targetRect.left;
+            
+        //     enlargedId = clicked.delegateTarget.id;
+        //     let enlarge = document.getElementById(clicked.delegateTarget.id);
+        //     enlarge.className = "enlarged";
+        //     setTimeout(function() {
+        //         switch (enlargedId) {
+        //             case "work":
+        //                 enlarge.innerHTML = "<h1>WORK INFO HERE</h1>"
+        //                 break;
+        //             case "about":
+        //                 enlarge.innerHTML = "ABOUT INFO HERE"
+        //                 break; 
+        //             case "resume":
+        //                 enlarge.innerHTML = "RESUME INFO HERE"
+        //                 break;
+        //             case "contact":
+        //                 enlarge.innerHTML = "CONTACT INFO HERE"
+        //                 break;
+        //         }
+        //     }, 1000);
+        // }
+
+        // function reduce(clicked) {
+        //     // reply_click(event.target.id);
+        //     reducedId = clicked.delegateTarget.id;
+        //     let reduced = document.getElementById(clicked.delegateTarget.id);
+        //     placeInEmptyLocation(clicked);
+        //     reduced.className = "buttons";
+        //     // setTimeout(function() {
+        //         switch (reducedId) {
+        //             case "work":
+        //                 reduced.innerHTML = "<h1>WORK</h1>"
+        //                 break;
+        //             case "about":
+        //                 reduced.innerHTML = "<h1>ABOUT</h1>"
+        //                 break; 
+        //             case "resume":
+        //                 reduced.innerHTML = "<h1>RESUME</h1>"
+        //                 break;
+        //             case "contact":
+        //                 reduced.innerHTML = "<h1>CONTACT</h1>"
+        //                 break;
+        //         }
+        //     // }, 1000);
+        //     console.log("uhoh")
+            
+        // }
+
+        // function switchEnlarge(switchData) {
+        //     var clicked = switchData[0];
+        //     var alrEnlargedId = switchData[1];
+
+        //     let alrEnlarged = document.getElementById(alrEnlargedId);
+        //     alrEnlarged.className = "buttons";
+        //     switch (alrEnlargedId) {
+        //             case "work":
+        //                 alrEnlarged.innerHTML = "<h1>WORK</h1>"
+        //                 break;
+        //             case "about":
+        //                 alrEnlarged.innerHTML = "<h1>ABOUT</h1>"
+        //                 break; 
+        //             case "resume":
+        //                 alrEnlarged.innerHTML = "<h1>RESUME</h1>"
+        //                 break;
+        //             case "contact":
+        //                 alrEnlarged.innerHTML = "<h1>CONTACT</h1>"
+        //                 break;
+        //     }
+
+        //     enlargedId = clicked.delegateTarget.id;
+        //     let enlarge = document.getElementById(clicked.delegateTarget.id);
+        //     enlarge.className = "enlarged";
+        //     setTimeout(function() {
+        //         switch (enlargedId) {
+        //             case "work":
+        //                 enlarge.innerHTML = "<h1>WORK INFO HERE</h1>"
+        //                 break;
+        //             case "about":
+        //                 enlarge.innerHTML = "ABOUT INFO HERE"
+        //                 break; 
+        //             case "resume":
+        //                 enlarge.innerHTML = "RESUME INFO HERE"
+        //                 break;
+        //             case "contact":
+        //                 enlarge.innerHTML = "CONTACT INFO HERE"
+        //                 break;
+        //         }
+        //     }, 1000);
+        // }
+
+        // function placeInEmptyLocation(clicked) {
+        //     console.log(clicked)
+        //     const container = document.getElementById("container");
+        //     const existingButtons = document.querySelectorAll(".buttons");
+
+        //     let newButtonRect = clicked.target.getBoundingClientRect();
+        //     console.log(newButtonRect);
+        //     let newBtnWH = [200, 200];
+        //     let containerRect = $("#container").get(0).getBoundingClientRect();
+
+        //     let newX, newY;
+
+        //     do {
+        //         newX = Math.random() * (containerRect.width - newBtnWH[0]);
+        //         newY = Math.random() * (containerRect.height - newBtnWH[1]);
+        //         console.log(newButtonRect.width);
+        //         console.log(newButtonRect.height)
+        //         console.log(newX );
+        //         console.log(newY)
+        //         // Check for overlaps with existing buttons
+        //         var overlap = false;
+        //         existingButtons.forEach((button) => {
+        //             const buttonRect = button.getBoundingClientRect();
+        //             if (
+        //                 newX < buttonRect.right &&
+        //                 newX + newButtonRect.width > buttonRect.left &&
+        //                 newY < buttonRect.bottom &&
+        //                 newY + newButtonRect.height > buttonRect.top
+        //             ) {
+        //                 overlap = true;
+        //                 console.log("looping");
+        //             }
+        //         });
+        //     } while (overlap);
+
+        //     // Set the position of the new button
+        //     // clicked.delegateTarget.offsetLeft = newX + "px";
+        //     clicked.target.style.left = newX+'px';
+        //     clicked.target.style.top = newY + 'px';
+        //     // clicked.delegateTarget.offsetTop = newY + "px";
+        // }
+
+    </script>
+</body>
+</html>

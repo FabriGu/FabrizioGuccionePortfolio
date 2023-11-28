@@ -1,0 +1,482 @@
+/* --------------------------------------------- GENERIC ---------------------------------------------  */
+body {
+    background-color: black !important;
+    padding: 0;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.noPadding {
+    padding: 0px !important; 
+}
+
+.center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: row;
+
+    max-width: auto !important;
+}
+
+.row {
+    width: 100% !important;
+}
+
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: absolute;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.fullScreen {
+    width: 100% !important;
+    height: 100vh !important;
+}
+
+.flex {
+    display: flex;
+}
+
+/* --------------------------------------------- WRITING ---------------------------------------------  */
+h1 {
+    font-size: 24pt !important;
+    font-family: "new-order", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white !important;
+}
+
+h2 {
+    font-size: 20pt !important;
+    font-family: "new-order", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white !important;
+}
+
+h3 {
+    font-size: 16pt !important;
+    font-family: "new-order", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white !important;
+}
+
+h4 {
+    font-size: 11pt !important;
+    font-family: "new-order", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white !important;
+}
+
+/* --------------------------------------------- NAV --------------------------------------------- */
+#container{
+    width: 100vw !important;
+}
+
+.nav {
+    border: solid 0px black;
+
+    background-color: black;
+    
+	position: fixed;
+	z-index: 1;
+	top:110px;
+	left:50%;
+	transform: translate(-50%, -50%);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+    padding-bottom: 20px;
+    padding-top: 5px;
+
+	width: 100vw;
+}
+
+.buttonsS {
+    background-color: white;
+    border-radius: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin: 10px;
+    margin-top: 20px;
+
+    width: 150px;
+    height: 150px;
+
+    text-decoration: none;
+    color: black;
+    font-weight:bolder;
+}
+
+#work {
+    /* border: solid 2px #3745d5; */ 
+    background-color: #6B74DB;
+}
+
+#about {
+    /* border: solid 2px #a84fec; */
+    background-color: #7F09DB;
+}
+
+#resume {
+    /* border: solid 2px #639ef6; */
+    background-color: #2C73DB;
+}
+#contact {
+    /* border: solid 2px #ec71fc; */
+    background-color:  #C832DB;
+}
+#home {
+    /* border: solid 2px #8e6ff4; */
+    background-color:  #6540DC;
+    text-align: center;
+}
+
+/* --------------------------------------------- PAGES (GENERAL) --------------------------------------------- */
+#column{
+    max-height: 80vh;
+}
+
+header {
+    padding: 20px;
+}
+
+/* --------------------------------------------- WORK PAGE ---------------------------------------------  */
+
+.workContentCont::-webkit-scrollbar {
+    display: none;
+}
+
+.workContentCont{
+    border: solid black 2px;
+    border-radius: 4px !important;
+
+    aspect-ratio: 2/1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+
+    margin: auto;
+
+    width: 65%;
+}
+
+.workContentCont > div{
+    aspect-ratio: 2/1;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.workContent {
+    max-width: 100% !important;
+}
+
+/* --------------------------------------------- ABOUT PAGE --------------------------------------------- */
+
+.aboutContentCont {
+    /* background-color: #7F09DBBF !important;  */
+    border: solid black 2px;
+    border-radius: 4px !important;
+
+    aspect-ratio: 2/1;
+
+    margin: auto;
+
+    width: 65%;
+}
+
+#textArea{
+    padding-top: 70px;
+}
+
+#mainArea{
+	border:solid 0px black;
+
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+#mainArea section{
+	border: solid 0px blue;
+	flex-grow: 1;
+
+	width: 50%;
+	max-width: 50%;
+	min-width: 50%;
+}
+
+.aboutPic {
+    float: left;
+
+    border-radius: 4px;
+    
+    align-self: start;
+
+	margin-right: 30px;
+    margin-bottom: 0;
+
+	width: 50%;
+}
+
+/* --------------------------------------------- RESUME PAGE --------------------------------------------- */
+
+#experienceBtnArea {
+    border:solid 0px black;
+  
+	display: flex;
+    align-items: center !important;
+    justify-content: center !important; 
+    flex-flow: row wrap;
+/*     
+    padding-left: 35px;
+    padding-right: 35px; */
+}
+
+.resumeLBtn {
+    background-color: #2C73DBBF !important;
+    border: none !important;
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    flex: 1 1 0;
+
+    min-width: 45%;
+    
+    min-height: 110px;
+    max-height: 110px ;
+
+    margin: 10px;
+    padding: 10px !important;
+    
+}
+
+.resumeSBtn {
+    background-color: #2C73DBBF !important;
+    border: none !important;
+    border-radius: 5px;
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex: 1 1 0;
+
+    padding: 10px;
+    margin: 10px;
+
+    max-width: 20%;
+    min-width: 30%;
+    min-height: 15% !important;
+   
+}
+
+.skillsBtnArea, .languagesBtnArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap !important;
+}
+
+#educationBtnArea{
+    border:solid 0px black;
+
+	display: flex;
+    align-items: center !important;
+    justify-content: center !important; 
+    flex-flow: row wrap;
+
+    min-height: 80%;
+    
+    /* padding-left: 35px;
+    padding-right: 35px; */
+}
+
+#educationBtnArea button {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+
+    min-height: 100% !important;
+    max-height: 100% !important; 
+}
+
+#resumeMainArea {
+    border:solid 0px black;
+    background-color: #2C73DBBF !important;
+
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    /* padding-left: 35px;
+    padding-right: 35px; */
+}
+
+.resumeBackgroundCol {
+    background-color: #2C73DBBF !important;
+}
+
+.skillsBtnArea div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+
+    min-height: 100% !important;
+    max-height: 100% !important; 
+}
+
+.languagesBtnArea div {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-top: 18px !important;
+    margin-bottom: 18px !important;
+
+    min-height: 100% !important;
+    max-height: 100% !important; 
+}
+
+#languagesBtnArea
+
+.rounding{
+    border-radius: 4px;
+}
+
+.column {
+    display: flex;
+    flex-flow: column wrap;
+
+    max-width: 50%;
+}
+
+.custom-popover {
+    --bs-popover-body-padding-x: 1rem !important;
+    --bs-popover-body-padding-y: .5rem !important;
+    font-size: 13pt !important;
+    font-family: "new-order", sans-serif !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+    
+    border: solid 3px black !important;
+}
+
+/* --------------------------------------------- CONTACT PAGE --------------------------------------------- */
+
+#contactInfo {
+    border: solid 0px black;
+    
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+    text-align: center;
+}
+
+#contactMainArea {
+    border:solid 0px black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+#contactInfoSpec {
+	padding-bottom:  50px;
+}
+
+#socials{
+	border: solid 0px black;
+
+	justify-content: space-between;
+	align-items: center;
+
+	width: 30%;
+	min-width: 400px;
+}
+
+
+#linkedin{
+	border: solid 0px black;
+	padding:7px;
+}
+
+#meta{
+	margin-left: -5px;
+}
+
+
+
+/* DELETE */
+/* 
+
+.belowNav {
+    margin-top: 250px !important;
+} */
+/* 
+
+section a{
+    display:flex;
+    padding-right: -10px;
+    
+    width : 97.6%;
+    max-width : 97.6%;
+    min-width: 45%;
+} */
+/* 
+.workBody {
+    border: solid 5px yellow;
+
+	position: fixed;
+	z-index: 1;
+	bottom:0%;
+	left:50%;
+
+    transform: translateX(-50%);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column-reverse;
+
+
+	width: 80vw !important;
+    height: 50vw;
+
+    padding-bottom: 50px;
+} */
+
